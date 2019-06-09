@@ -1,0 +1,38 @@
+---
+
+version: "3"
+
+services:
+  houston:
+    build:
+      context: .
+      dockerfile: Dockerfile-development
+    stdin_open: true
+    tty: true
+    ports:
+      - "4000:4000"
+    environment:
+      PORT: 4000
+    volumes:
+      - ./apps:/opt/houston/apps
+      - ./config:/opt/houston/config
+    command: do ecto.create, phx.server
+    working_dir: /opt/houston
+    depends_on:
+      - postgres
+      - mongo
+
+  postgres:
+    image: timescale/timescaledb:latest-pg11
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USERNAME: postgres
+
+  mongo:
+    image: mongo:3.2
+    volumes:
+      - ./apps/houston_legacy/test/fixtures:/docker-entrypoint-initdb.d
+    environment:
+      MONGO_INITDB_DATABASE: houston_test

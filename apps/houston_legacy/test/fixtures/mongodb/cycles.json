@@ -1,0 +1,239 @@
+{
+	"_id": {
+		"$oid": "58ccb0612bc9c01887189dbf"
+	},
+	"project": {
+		"$oid": "58cc88a1e3b49c7dba7151e3"
+	},
+	"installation": 7465,
+	"repo": "https://github.com/elementary/debian-test-package.git",
+	"tag": "v1.0.8",
+	"name": "com.github.elementary.debian-test-package",
+	"version": "1.0.8",
+	"type": "RELEASE",
+	"_status": "FINISH",
+	"packages": [
+		"Pamd64 com.github.elementary.debian-test-package 1.0.8 d6c266b2eeca44a7"
+	],
+	"changelog": [
+		{
+			"version": "1.0.0",
+			"date": {
+				"$date": "2016-03-03T08:09:45.000Z"
+			},
+			"changelog": [
+				"jfslkqjtköweljt",
+				"thrqeiojtowje"
+			],
+			"author": "fabianthoma"
+		},
+		{
+			"version": "1.0.1",
+			"date": {
+				"$date": "2015-06-13T13:35:26.000Z"
+			},
+			"changelog": [
+				"Make the changelog generate on it's own."
+			],
+			"author": "fabianthoma"
+		},
+		{
+			"version": "1.0.2",
+			"date": {
+				"$date": "2015-06-14T13:08:10.000Z"
+			},
+			"changelog": [
+				"This is a new Feature",
+				"Another new Feature",
+				"And one more"
+			],
+			"author": "fabianthoma"
+		},
+		{
+			"version": "1.0.3",
+			"date": {
+				"$date": "2016-03-03T08:05:21.000Z"
+			},
+			"changelog": [
+				"Testing some more stuff"
+			],
+			"author": "fabianthoma"
+		},
+		{
+			"version": "1.0.4",
+			"date": {
+				"$date": "2016-03-03T08:13:44.000Z"
+			},
+			"changelog": [
+				"This release fixes the missing desktop file and the missing icon."
+			],
+			"author": "fabianthoma"
+		},
+		{
+			"version": "1.0.5",
+			"date": {
+				"$date": "2016-03-03T20:48:39.000Z"
+			},
+			"changelog": [
+				"More TESTs"
+			],
+			"author": "fabianthoma"
+		},
+		{
+			"version": "1.0.6",
+			"date": {
+				"$date": "2016-03-10T21:00:58.000Z"
+			},
+			"changelog": [
+				"This is a new Release"
+			],
+			"author": "fabianthoma"
+		},
+		{
+			"version": "1.0.7",
+			"date": {
+				"$date": "2016-03-10T21:18:39.000Z"
+			},
+			"changelog": [
+				"New Test release"
+			],
+			"author": "fabianthoma"
+		},
+		{
+			"version": "1.0.8",
+			"date": {
+				"$date": "2017-03-18T01:03:11.000Z"
+			},
+			"changelog": [
+				"Testing AppCenter release"
+			],
+			"author": "btkostner"
+		}
+	],
+	"__v": 0
+}
+{
+	"_id": {
+		"$oid": "58ccb4272bc9c01887189dc2"
+	},
+	"project": {
+		"$oid": "58cc88a1e3b49c7dba7151e3"
+	},
+	"installation": 7465,
+	"repo": "https://github.com/elementary/debian-test-package.git",
+	"tag": "v1.0.9",
+	"name": "com.github.elementary.debian-test-package",
+	"version": "1.0.9",
+	"type": "RELEASE",
+	"stripe": "pk_live_redactedkey",
+	"_status": "FINISH",
+	"packages": [
+		"Pamd64 com.github.elementary.debian-test-package 1.0.9 1f74afa2dc5c5b3d"
+	],
+	"changelog": [
+		{
+			"version": "1.0.0",
+			"date": {
+				"$date": "2016-03-03T08:09:45.000Z"
+			},
+			"changelog": [
+				"jfslkqjtköweljt",
+				"thrqeiojtowje"
+			],
+			"author": "fabianthoma"
+		},
+		{
+			"version": "1.0.1",
+			"date": {
+				"$date": "2015-06-13T13:35:26.000Z"
+			},
+			"changelog": [
+				"Make the changelog generate on it's own."
+			],
+			"author": "fabianthoma"
+		},
+		{
+			"version": "1.0.2",
+			"date": {
+				"$date": "2015-06-14T13:08:10.000Z"
+			},
+			"changelog": [
+				"This is a new Feature",
+				"Another new Feature",
+				"And one more"
+			],
+			"author": "fabianthoma"
+		},
+		{
+			"version": "1.0.3",
+			"date": {
+				"$date": "2016-03-03T08:05:21.000Z"
+			},
+			"changelog": [
+				"Testing some more stuff"
+			],
+			"author": "fabianthoma"
+		},
+		{
+			"version": "1.0.4",
+			"date": {
+				"$date": "2016-03-03T08:13:44.000Z"
+			},
+			"changelog": [
+				"This release fixes the missing desktop file and the missing icon."
+			],
+			"author": "fabianthoma"
+		},
+		{
+			"version": "1.0.5",
+			"date": {
+				"$date": "2016-03-03T20:48:39.000Z"
+			},
+			"changelog": [
+				"More TESTs"
+			],
+			"author": "fabianthoma"
+		},
+		{
+			"version": "1.0.6",
+			"date": {
+				"$date": "2016-03-10T21:00:58.000Z"
+			},
+			"changelog": [
+				"This is a new Release"
+			],
+			"author": "fabianthoma"
+		},
+		{
+			"version": "1.0.7",
+			"date": {
+				"$date": "2016-03-10T21:18:39.000Z"
+			},
+			"changelog": [
+				"New Test release"
+			],
+			"author": "fabianthoma"
+		},
+		{
+			"version": "1.0.8",
+			"date": {
+				"$date": "2017-03-18T01:03:11.000Z"
+			},
+			"changelog": [
+				"Testing AppCenter release"
+			],
+			"author": "btkostner"
+		},
+		{
+			"version": "1.0.9",
+			"date": {
+				"$date": "2017-03-18T04:13:47.000Z"
+			},
+			"changelog": [
+				"Payments testing for AppCenter"
+			],
+			"author": "btkostner"
+		}
+	],
+	"__v": 0
+}

@@ -1,0 +1,305 @@
+{
+	"_id": {
+		"$oid": "58cc88a1e3b49c7dba7151e3"
+	},
+	"name": "com.github.elementary.debian-test-package",
+	"repo": "https://github.com/elementary/debian-test-package.git",
+	"cycles": [
+		{
+			"$oid": "58ccb0612bc9c01887189dbf"
+		},
+		{
+			"$oid": "58ccb4272bc9c01887189dc2"
+		}
+	],
+	"releases": [
+		{
+			"version": "1.0.8",
+			"_id": {
+				"$oid": "58cc88a2e3b49c7dba7151ec"
+			},
+			"cycles": [
+				{
+					"$oid": "58ccb0612bc9c01887189dbf"
+				}
+			],
+			"_status": "DEFER",
+			"date": {
+				"released": {
+					"$date": "2017-03-18T01:03:11.000Z"
+				}
+			},
+			"github": {
+				"id": 5789103,
+				"author": "btkostner",
+				"date": {
+					"$date": "2017-03-18T01:03:11.000Z"
+				},
+				"tag": "v1.0.8"
+			},
+			"changelog": [
+				"Testing AppCenter release"
+			]
+		},
+		{
+			"version": "1.0.7",
+			"_id": {
+				"$oid": "58cc88a2e3b49c7dba7151eb"
+			},
+			"cycles": [],
+			"_status": "STANDBY",
+			"date": {
+				"released": {
+					"$date": "2016-03-10T21:18:39.000Z"
+				}
+			},
+			"github": {
+				"id": 2788143,
+				"author": "fabianthoma",
+				"date": {
+					"$date": "2016-03-10T21:18:39.000Z"
+				},
+				"tag": "v1.0.7"
+			},
+			"changelog": [
+				"New Test release"
+			]
+		},
+		{
+			"version": "1.0.6",
+			"_id": {
+				"$oid": "58cc88a2e3b49c7dba7151ea"
+			},
+			"cycles": [],
+			"_status": "STANDBY",
+			"date": {
+				"released": {
+					"$date": "2016-03-10T21:00:58.000Z"
+				}
+			},
+			"github": {
+				"id": 2788016,
+				"author": "fabianthoma",
+				"date": {
+					"$date": "2016-03-10T21:00:58.000Z"
+				},
+				"tag": "v1.0.6"
+			},
+			"changelog": [
+				"This is a new Release"
+			]
+		},
+		{
+			"version": "1.0.5",
+			"_id": {
+				"$oid": "58cc88a2e3b49c7dba7151e9"
+			},
+			"cycles": [],
+			"_status": "STANDBY",
+			"date": {
+				"released": {
+					"$date": "2016-03-03T20:48:39.000Z"
+				}
+			},
+			"github": {
+				"id": 2739452,
+				"author": "fabianthoma",
+				"date": {
+					"$date": "2016-03-03T20:48:39.000Z"
+				},
+				"tag": "v1.0.5"
+			},
+			"changelog": [
+				"More TESTs"
+			]
+		},
+		{
+			"version": "1.0.4",
+			"_id": {
+				"$oid": "58cc88a2e3b49c7dba7151e8"
+			},
+			"cycles": [],
+			"_status": "STANDBY",
+			"date": {
+				"released": {
+					"$date": "2016-03-03T08:13:44.000Z"
+				}
+			},
+			"github": {
+				"id": 2733768,
+				"author": "fabianthoma",
+				"date": {
+					"$date": "2016-03-03T08:13:44.000Z"
+				},
+				"tag": "v1.0.4"
+			},
+			"changelog": [
+				"This release fixes the missing desktop file and the missing icon."
+			]
+		},
+		{
+			"version": "1.0.0",
+			"_id": {
+				"$oid": "58cc88a2e3b49c7dba7151e7"
+			},
+			"cycles": [],
+			"_status": "STANDBY",
+			"date": {
+				"released": {
+					"$date": "2016-03-03T08:09:45.000Z"
+				}
+			},
+			"github": {
+				"id": 2733757,
+				"author": "fabianthoma",
+				"date": {
+					"$date": "2016-03-03T08:09:45.000Z"
+				},
+				"tag": "v1.0.0"
+			},
+			"changelog": [
+				"jfslkqjtköweljt",
+				"thrqeiojtowje"
+			]
+		},
+		{
+			"version": "1.0.3",
+			"_id": {
+				"$oid": "58cc88a2e3b49c7dba7151e6"
+			},
+			"cycles": [],
+			"_status": "STANDBY",
+			"date": {
+				"released": {
+					"$date": "2016-03-03T08:05:21.000Z"
+				}
+			},
+			"github": {
+				"id": 2733727,
+				"author": "fabianthoma",
+				"date": {
+					"$date": "2016-03-03T08:05:21.000Z"
+				},
+				"tag": "v1.0.3"
+			},
+			"changelog": [
+				"Testing some more stuff"
+			]
+		},
+		{
+			"version": "1.0.2",
+			"_id": {
+				"$oid": "58cc88a2e3b49c7dba7151e5"
+			},
+			"cycles": [],
+			"_status": "STANDBY",
+			"date": {
+				"released": {
+					"$date": "2015-06-14T13:08:10.000Z"
+				}
+			},
+			"github": {
+				"id": 1414017,
+				"author": "fabianthoma",
+				"date": {
+					"$date": "2015-06-14T13:08:10.000Z"
+				},
+				"tag": "v1.0.2"
+			},
+			"changelog": [
+				"This is a new Feature",
+				"Another new Feature",
+				"And one more"
+			]
+		},
+		{
+			"version": "1.0.1",
+			"_id": {
+				"$oid": "58cc88a2e3b49c7dba7151e4"
+			},
+			"cycles": [],
+			"_status": "STANDBY",
+			"date": {
+				"released": {
+					"$date": "2015-06-13T13:35:26.000Z"
+				}
+			},
+			"github": {
+				"id": 1412220,
+				"author": "fabianthoma",
+				"date": {
+					"$date": "2015-06-13T13:35:26.000Z"
+				},
+				"tag": "v1.0.1"
+			},
+			"changelog": [
+				"Make the changelog generate on it's own."
+			]
+		},
+		{
+			"changelog": [
+				"Payments testing for AppCenter"
+			],
+			"github": {
+				"tag": "v1.0.9",
+				"date": {
+					"$date": "2017-03-18T04:13:47.000Z"
+				},
+				"author": "btkostner",
+				"id": 5789564
+			},
+			"date": {
+				"released": {
+					"$date": "2017-03-18T04:13:47.000Z"
+				}
+			},
+			"_status": "DEFER",
+			"cycles": [
+				{
+					"$oid": "58ccb4272bc9c01887189dc2"
+				}
+			],
+			"_id": {
+				"$oid": "58ccb3fc2bc9c01887189dc1"
+			},
+			"version": "1.0.9"
+		}
+	],
+	"_status": "DEFER",
+	"stripe": {
+		"enabled": true,
+		"public": "pk_live_redactedpublickey",
+		"refresh": "rt_redactedrefreshkey",
+		"access": "sk_live_redactedaccesskey",
+		"id": "acct_redactedaccount",
+		"user": {
+			"$oid": "588ffbe22fd60a50095bc721"
+		}
+	},
+	"github": {
+		"id": 35954240,
+		"owner": "elementary",
+		"name": "debian-test-package",
+		"installation": 7465,
+		"label": "AppHub",
+		"private": false
+	},
+	"tag": "master",
+	"type": "Application",
+	"__v": 0,
+	"apphub": {
+		"endpoints": {
+			"elementary": true,
+			"github": true
+		},
+		"package": {
+			"price": 0
+		},
+		"log": {
+			"level": "warn",
+			"color": "3a416f",
+			"label": "AppHub",
+			"enabled": true
+		}
+	}
+}

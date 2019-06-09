@@ -1,0 +1,11 @@
+---
+
+services:
+  - docker
+
+install:
+  - docker-compose build
+
+script:
+  - docker-compose run houston format --check-formatted
+  - docker-compose run houston test

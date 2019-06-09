@@ -1,0 +1,198 @@
+<section class="hero dark">
+  <div class="grid">
+    <div class="whole">
+      <img src="https://elementary.io/images/icons/apps/128/system-software-install.svg" alt="AppCenter icon">
+      <h1>Publish on AppCenter</h1>
+      <h4>An open, pay-what-you-want app store for indie developers</h4>
+      <a class="button suggested-action" href="/dashboard">Log In with GitHub</a>
+    </div>
+    <div class="half"></div>
+  </div>
+</section>
+
+<section class="docs">
+  <a class="card" href="https://elementary.io/docs/code/getting-started">
+    <i class="fa fa-2x fa-book"></i>
+    <h2>Get Started</h2>
+    <p>Get a basic app running, built, and ready for distribution with our Getting Started guide</p>
+  </a>
+  <a class="card" href="https://elementary.io/docs/human-interface-guidelines">
+    <i class="fa fa-2x fa-pencil"></i>
+    <h2>Design</h2>
+    <p>Learn about the design principles that make up apps on elementary OS.</p>
+  </a>
+  <a class="card" href="https://elementary.io/docs/code/reference">
+    <i class="fa fa-2x fa-code"></i>
+    <h2>Reference</h2>
+    <p>Get more info about code style, reporting issues, and proposing design changes</p>
+  </a>
+</section>
+
+<section class="pitch-appcenter">
+  <div>
+    <img src="https://elementary.io/images/screenshots/appcenter.png">
+  </div>
+  <div>
+    <h2>Get In Front of Users</h2>
+    <ul class="fa-ul">
+      <li><i class="fa fa-star fa-li"></i> New apps get featured with a large, branded banner. Plus, trending and recently-updated apps are featured on the front page.</li>
+      <li><i class="fa fa-search fa-li"></i> Define your app's keywords, categories, and subcategories to help people find it.</li>
+      <li><i class="fa fa-share-alt fa-li"></i> With built-in social media sharing and app URLs, users can easily share your app right from AppCenter.</li>
+    </ul><a class="read-more" href="https://elementary.io/docs/code/getting-started#the-desktop-file" target="_blank">Learn more about app metadata</a>
+  </div>
+</section>
+
+<section class="tools grey">
+  <div>
+    <h2>Monetize Your Work With Familiar Tools</h2>
+  </div>
+  <div>
+    <div>
+      <div class="card">
+        <img src="/images/stripe_logo.svg">
+        <div class="banner">
+          <p>Payments are split between you and elementary</p>
+          <p class="split">70 <span>/</span> 30</p>
+          <p class="small">with a minimum platform fee of 50¢</p>
+        </div>
+        <ul class="fa-ul">
+          <li><i class="fa fa-credit-card fa-li"></i> Fast, easy pay-what-you-want downloads from users of elementary OS.</li>
+          <li><i class="fa fa-lock fa-li"></i> Powered by Stripe Connect ensuring simplicity, security, and compliance.</li>
+          <li><i class="fa fa-thumbs-up fa-li"></i> No enrollment fees or subscription costs.</li>
+        </ul>
+      </div>
+      <p>
+        <a class="read-more" href="https://github.com/elementary/houston/wiki/Monetizing-Your-App" target="_blank">Learn more about monetizing your app</a>
+      </p>
+    </div>
+    <div>
+      <div class="card">
+        <img src="/images/github_logo.svg">
+        <div class="banner">
+          <p>Publish without distrupting your workflow</p>
+          <div class="workflow">
+            <div>
+              <i class="fab fa-3x fa-github"></i>
+              <p class="small">Git Tag</p>
+            </div>
+            <i class="fa fa-angle-right"></i>
+            <div>
+              <i class="fas fa-3x fa-cogs"></i>
+              <p class="small">Auto-Review</p>
+            </div>
+            <i class="fa fa-angle-right"></i>
+            <div>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4.2333 3.7042">
+                <path class="logotype-svg" style="text-align:start" d="m0.26314-0.0055-0.26458 0.79374v0.26458c0 0.52916 0.52916 0.52916 0.52916 0.52916 0.29315 0 0.52916-0.23601 0.52916-0.52916 0 0.29315 0.23601 0.52916 0.52916 0.52916s0.52916-0.23601 0.52916-0.52916c0 0.29315 0.23601 0.52916 0.52916 0.52916s0.52916-0.23601 0.52916-0.52916c0 0.29315 0.23601 0.52916 0.52916 0.52916 0 0 0.52916 0 0.52916-0.52916v-0.26458l-0.26458-0.79374zm0 1.8521v1.5875s0 0.26458 0.26458 0.26458h3.175c0.26458 0 0.26458-0.26458 0.26458-0.26458v-1.5875h-0.26458v1.5875h-0.52916v-0.92603c0-0.21987-0.177-0.39687-0.39687-0.39687s-0.39687 0.177-0.39687 0.39687v0.92603h-1.8521v-1.5875zm0.79374 0.26458v0.79374h0.79374v-0.79374z"
+                  fill="#fff" />
+              </svg>
+              <p class="small">Published</p>
+            </div>
+          </div>
+        </div>
+
+        <ul class="fa-ul">
+          <li><i class="fas fa-code-branch fa-li"></i> Keep issue tracking &amp; release management where you're familiar.</li>
+          <li><i class="fas fa-sync fa-li"></i> Submit updates and see review status in AppCenter Dashboard.</li>
+          <li><i class="fab fa-github fa-li"></i> Track review feedback with GitHub Issues.</li>
+        </ul>
+      </div>
+      <p>
+        <a class="read-more" href="https://github.com/elementary/houston/wiki/Submission-Process" target="_blank">Learn more about the submission process</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="grid">
+    <div class="two-thirds">
+      <img src="/images/vala.svg">
+      <h2>Vala. A Modern, Fast, Open Source Language.</h2>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="third">
+      <i class="fa fa-cube"></i>
+      <p>Familiar to anyone who's seen C#, but maintains API/ABI compatibility with C</p>
+    </div>
+    <div class="third">
+      <i class="fa fa-rocket"></i>
+      <p>Low memory requirements, native execution, and purpose-built for GObject</p>
+    </div>
+    <div class="third">
+      <i class="fa fa-cogs"></i>
+      <p>Signals, properties, generics, lambdas, assisted memory management, exception handling, type inference, async/yield & more</p>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="two-thirds">
+<pre><code>public class MyApp : Gtk.Application {
+
+    public MyApp () {
+        Object (application_id: "com.github.myteam.myapp",
+        flags: ApplicationFlags.FLAGS_NONE);
+    }
+
+    protected override void activate () {
+        var window = new Gtk.ApplicationWindow (this);
+        window.title = "MyApp";
+        window.set_default_size (1024, 768);
+        window.show_all ();
+    }
+
+    public static int main (string[] args) {
+        var app = new MyApp ();
+        return app.run (args);
+    }
+}</code></pre>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="whole">
+      <p>Full API documentation available on</p>
+      <a class="button suggested-action valadoc" href="http://valadoc.elementary.io"><img src="images/valadoc_logo.svg" alt="Valadoc" target="_blank"></a>
+    </div>
+  </div>
+</section>
+
+<section class="grey">
+  <div class="grid" id="beta">
+    <div class="two-thirds">
+      <img src="https://elementary.io/images/icons/places/64/distributor-logo.svg">
+      <h2>Download elementary OS 5 Juno</h2>
+      <p>
+        Build and release your apps for the latest version of elementary OS. Juno brings new APIs, improved notifications, a new location agent, new Granite CSS constants, new icons, and tons more. Build feature-full apps easier than ever with
+        Gtk 3.22 &amp; Vala 0.40.
+      </p>
+      <a class="read-more" href="https://medium.com/@cassidyjames/471dfdedc7b3" target="_blank">Read the release notes</a>
+      <p>
+        <div class="whole"><a class="button suggested-action" href="https://elementary.io/">Pay What You Want</a></div>
+      </p>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="third">
+      <strong>Multimedia & Web</strong>
+      <p><a class="read-more" href="https://valadoc.org/gstreamer-1.0/Gst.html" target="_blank">Audio & Video</a></p>
+      <p><a class="read-more" href="http://valadoc.org/libgda-5.0/Gda" target="_blank">Database Management</a></p>
+      <p><a class="read-more" href="http://valadoc.org/libsoup-2.4/Soup" target="_blank">HTTP Client/Server</a></p>
+      <p><a class="read-more" href="http://valadoc.org/json-glib-1.0/Json" target="_blank">JSON</a></p>
+    </div>
+    <div class="third">
+      <strong>System</strong>
+      <p><a class="read-more" href="https://valadoc.org/gio-2.0/GLib.Notification.html" target="_blank">Notifications</a></p>
+      <p><a class="read-more" href="https://valadoc.org/libpeas-1.0/Peas.html" target="_blank">Plugins</a></p>
+      <p><a class="read-more" href="https://valadoc.org/gio-2.0/GLib.Settings.html" target="_blank">Settings</a></p>
+      <p><a class="read-more" href="http://valadoc.org/granite/Granite.Services.ContractorProxy" target="_blank">System Actions</a></p>
+    </div>
+    <div class="third">
+      <strong>UI & Drawing</strong>
+      <p><a class="read-more" href="https://valadoc.org/champlain-0.12/Champlain.html" target="_blank">Maps</a></p>
+      <p><a class="read-more" href="https://valadoc.org/granite/Granite.html" target="_blank">Granite</a></p>
+      <p><a class="read-more" href="https://valadoc.org/gtk+-3.0/Gtk.html" target="_blank">Gtk+</a></p>
+      <p><a class="read-more" href="https://valadoc.org/sdl/SDL.html" target="_blank">SDL</a></p>
+    </div>
+  </div>
+</section>
