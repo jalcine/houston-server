@@ -6,14 +6,14 @@ defmodule Houston.Accounts.SessionTest do
   describe "expired?/1" do
     test "returns true for a session that expired in the past" do
       assert Session.expired?(%Session{
-        expires_at: DateTime.utc_now()
-      })
+               expires_at: DateTime.utc_now()
+             })
     end
 
     test "returns false for a session expiring in the future" do
       refute Session.expired?(%Session{
-        expires_at: DateTime.utc_now() |> DateTime.add(6000, :second)
-      })
+               expires_at: DateTime.utc_now() |> DateTime.add(6000, :second)
+             })
     end
   end
 

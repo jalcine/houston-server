@@ -15,7 +15,7 @@ defmodule HoustonLegacy do
     HoustonLegacy.Repo
     |> Mongo.find("projects", %{})
     |> Enum.to_list()
-    |> Enum.map(&(&1["name"]))
+    |> Enum.map(& &1["name"])
     |> Enum.uniq()
     |> Enum.sort()
     |> Enum.each(&sync!/1)
@@ -54,6 +54,7 @@ defmodule HoustonLegacy do
 
   defp upsert_project!(project, legacy_project, legacy_builds) do
     casted_project = cast_project(legacy_project, legacy_builds)
+
     changeset =
       project
       |> Houston.Repository.Project.changeset(casted_project)
@@ -66,9 +67,10 @@ defmodule HoustonLegacy do
   end
 
   defp cast_project(legacy_project, legacy_builds) do
-    builds = Enum.filter(legacy_builds, fn b ->
-      b["name"] === legacy_project["name"]
-    end)
+    builds =
+      Enum.filter(legacy_builds, fn b ->
+        b["name"] === legacy_project["name"]
+      end)
 
     casted_releases =
       legacy_project["releases"]
@@ -97,7 +99,7 @@ defmodule HoustonLegacy do
     casted_builds =
       legacy_builds
       |> Enum.filter(&(&1["tag"] == tag))
-      |> Enum.map(&(cast_builds(&1, version)))
+      |> Enum.map(&cast_builds(&1, version))
 
     %{
       builds: casted_builds,
@@ -116,7 +118,7 @@ defmodule HoustonLegacy do
   defp cast_builds(legacy_builds, version) do
     packages =
       legacy_builds["packages"]
-      |> Enum.filter(&(String.contains?(&1, to_string(version))))
+      |> Enum.filter(&String.contains?(&1, to_string(version)))
       |> Enum.map(&cast_packages/1)
 
     %{packages: packages}

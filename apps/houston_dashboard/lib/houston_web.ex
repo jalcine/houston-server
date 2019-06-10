@@ -42,7 +42,6 @@ defmodule HoustonDashboard do
       import Phoenix.LiveView, only: [live_render: 2, live_render: 3]
 
       alias HoustonDashboard.Router.Helpers, as: Routes
-
     end
   end
 

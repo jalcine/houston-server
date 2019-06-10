@@ -4,6 +4,7 @@ defmodule HoustonDashboard.TemplateHelpers do
   """
   def body_class(%Plug.Conn{request_path: "/"}), do: body_class("home")
   def body_class(%Plug.Conn{} = conn), do: body_class(conn.request_path)
+
   def body_class(path) when is_binary(path) do
     path
     |> String.replace("/", "-")
