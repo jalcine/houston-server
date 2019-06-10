@@ -24,7 +24,8 @@ Everything else should be hot code reloaded.
 ### Helpful tips
 
 The postgresql username and password are the default docker ones
-(`postgres:postgres`).
+(`postgres:postgres`). It is not port forwarded by default, but you can easily
+modify the `docker-compose.yml` file for easy access.
 
 Mongodb requires the same version cli as the server. To keep this simple, you
 can use `docker run --network host -it mongo:3.2 mongo` to access the mongo cli.
