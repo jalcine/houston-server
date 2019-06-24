@@ -1,0 +1,48 @@
+/*****************************************
+* Copyright 2019 elementary LLC.         *
+* This file is part of houston dashboard *
+*****************************************/
+
+.auth {
+  background-color: #7a36b1;
+  background-image: linear-gradient(to right bottom, #4c158a, #ad65d6);
+}
+
+.auth-login main {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.auth-login .login {
+  width: 100%;
+  border-radius: 3px;
+  background-color: #fff;
+  padding: 1rem;
+}
+
+@media (width >= 500px) {
+  .auth-login .login {
+    max-width: 500px;
+  }
+}
+
+.auth-login .login label {
+  display: block;
+  margin-bottom: 0.2em;
+  width: 100%;
+}
+
+.auth-login .login input {
+  display: block;
+  width: 100%;
+}
+
+.auth-login .login > div:not(:first-child) {
+  margin-top: 1rem;
+}
+
+.auth-login .login > div:last-child {
+  text-align: right;
+}

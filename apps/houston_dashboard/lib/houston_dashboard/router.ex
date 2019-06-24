@@ -17,7 +17,10 @@ defmodule HoustonDashboard.Router do
   scope "/", HoustonDashboard do
     pipe_through :browser
 
-    get "/", PageController, :index
+    get "/", HomepageController, :index
+
+    get "/auth/login", Auth.LoginController, :index
+    post "/auth/login", Auth.LoginController, :create
   end
 
   # Other scopes may use custom stacks.

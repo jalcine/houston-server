@@ -4,7 +4,11 @@
       <img src="https://elementary.io/images/icons/apps/128/system-software-install.svg" alt="AppCenter icon">
       <h1>Publish on AppCenter</h1>
       <h4>An open, pay-what-you-want app store for indie developers</h4>
-      <a class="button suggested-action" href="/dashboard">Log In with GitHub</a>
+      <%= if current_user?(@conn) do %>
+        <a class="button suggested-action" href="/dashboard">View Dashboard</a>
+      <% else %>
+        <a class="button suggested-action" href="/auth/login">Log In</a>
+      <% end %>
     </div>
     <div class="half"></div>
   </div>

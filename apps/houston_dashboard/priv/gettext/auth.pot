@@ -9,3 +9,13 @@
 ## effect: edit them in PO (`.po`) files instead.
 msgid ""
 msgstr ""
+
+#, elixir-format
+#: lib/houston_dashboard/templates/auth/login/index.html.eex:9
+msgid "Password"
+msgstr ""
+
+#, elixir-format
+#: lib/houston_dashboard/templates/auth/login/index.html.eex:3
+msgid "Username or Email"
+msgstr ""

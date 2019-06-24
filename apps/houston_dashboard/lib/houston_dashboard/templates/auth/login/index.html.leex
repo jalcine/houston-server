@@ -1,0 +1,22 @@
+<%= f = form_for @changeset, Routes.login_path(@socket, :create), [
+  csrf_token: @csrf_token,
+  phx_change: :validate,
+  class: "login",
+  as: "user"
+] %>
+  <div>
+    <%= label(f, :username_or_email, dgettext("auth", "Username or Email")) %>
+    <%= text_input f, :username_or_email, placeholder: "rabbit@elementary.io" %>
+    <%= error_tag f, :username_or_email %>
+  </div>
+
+  <div>
+    <%= label(f, :password, dgettext("auth", "Password")) %>
+    <%= password_input f, :password, placeholder: "correct horse battery staple" %>
+    <%= error_tag f, :password %>
+  </div>
+
+  <div>
+    <%= submit(dgettext("auth", "Log In"), phx_disable_with: "Logging In") %>
+  </div>
+</form>

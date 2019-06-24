@@ -1,13 +1,13 @@
-/*********************************************
-* Copyright 2016 elementary LLC.             *
-* This file is part of houston.elementary.io *
-*********************************************/
+/*****************************************
+* Copyright 2019 elementary LLC.         *
+* This file is part of houston dashboard *
+*****************************************/
 
 /*************
 * Navigation *
 *************/
 
-nav {
+.homepage nav {
     background-color: transparent;
     color: #fff;
     fill: #fff;
@@ -16,12 +16,12 @@ nav {
     z-index: 3;
 }
 
-nav > ul > li > a:focus {
+.homepage nav a:focus {
     color: #1f1f1f;
     fill: #1f1f1f;
 }
 
-footer ul li a:focus i.fa {
+.homepage footer a:focus i.fa {
     color: #1f1f1f;
     text-shadow: 0 1px 6px #fff;
 }
@@ -30,7 +30,7 @@ footer ul li a:focus i.fa {
 * Cards *
 ********/
 
-.card {
+.homepage .card {
     background-color: #fff;
     border-radius: 3px;
     box-shadow:
@@ -40,7 +40,7 @@ footer ul li a:focus i.fa {
     padding: 24px;
 }
 
-a.card {
+.homepage a.card {
     box-shadow:
         0 0 0 1px rgba(0, 0, 0, 0.15),
         0 8px 10px 1px rgba(0, 0, 0, 0.07),
@@ -51,8 +51,8 @@ a.card {
     transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-a.card:hover,
-a.card:focus {
+.homepage a.card:hover,
+.homepage a.card:focus {
     box-shadow:
         0 0 0 1px rgba(0, 0, 0, 0.15),
         0 12px 20px 1px rgba(0, 0, 0, 0.07),
@@ -61,7 +61,7 @@ a.card:focus {
     transform: translateY(-2px);
 }
 
-a.card:focus {
+.homepage a.card:focus {
     box-shadow:
         0 0 0 1px #64baff,
         0 12px 20px 1px rgba(0, 0, 0, 0.07),
@@ -71,7 +71,7 @@ a.card:focus {
     text-decoration: inherit;
 }
 
-a.card:active {
+.homepage a.card:active {
     box-shadow:
         0 1px 3px rgba(0, 0, 0, 0.12),
         0 1px 2px rgba(0, 0, 0, 0.24);
@@ -84,12 +84,7 @@ a.card:active {
 * Button *
 *********/
 
-button > i.fa,
-.button > i.fa {
-    margin-left: 16px;
-}
-
-.dark .button.suggested-action {
+.homepage .dark .button.suggested-action {
     background-image: linear-gradient(to bottom, #4d4d4d, #333);
     border-color: rgba(0, 0, 0, 0.8);
     box-shadow:
@@ -103,7 +98,7 @@ button > i.fa,
     transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.dark .button.suggested-action:hover {
+.homepage .dark .button.suggested-action:hover {
     box-shadow:
         inset 0 0 0 1px rgba(255, 255, 255, 0.02),
         inset 0 1px 0 0 rgba(255, 255, 255, 0.2),
@@ -113,7 +108,7 @@ button > i.fa,
     transform: translateY(-1px);
 }
 
-.dark .button.suggested-action:active {
+.homepage .dark .button.suggested-action:active {
     box-shadow:
         inset 0 0 0 1px rgba(255, 255, 255, 0.02),
         inset 0 1px 0 0 rgba(255, 255, 255, 0.2),
@@ -123,17 +118,17 @@ button > i.fa,
     transform: translateY(1px);
 }
 
-.button.valadoc {
+.homepage .button.valadoc {
     background-image: linear-gradient(to bottom, #ad65d6, #7a36b1);
     border-color: #260063;
     margin: 0;
 }
 
-.button.valadoc img {
+.homepage .button.valadoc img {
     filter: drop-shadow(0 1px 1px #4c158a);
 }
 
-.button.valadoc:focus:not(:active) {
+.homepage .button.valadoc:focus:not(:active) {
     box-shadow:
         inset 0 0 0 1px rgba(255, 255, 255, 0.05),
         inset 0 1px 0 0 rgba(255, 255, 255, 0.45),
@@ -142,94 +137,41 @@ button > i.fa,
         0 3px 6px rgba(203, 85, 250, 0.23);
 }
 
-/*************
-* Code Block *
-**************/
-
-code,
-pre {
-    background: #fdf6e3;
-    border-radius: 3px;
-    color: #657b83;
-    font-family: "Roboto Mono", monospace;
-    font-size: 90%;
-    text-align: justify;
-}
-
-pre {
-    overflow: auto;
-    padding: 8px;
-}
-
-pre > code {
-    border: none;
-    padding: 0;
-    white-space: pre;
-}
-
-pre.highlighted {
-    border: none;
-    box-shadow:
-        0 1px 3px rgba(0, 0, 0, 0.12),
-        0 1px 2px rgba(0, 0, 0, 0.24);
-    padding: 0;
-}
-
-pre.highlighted code {
-    border-radius: 0 3px 3px 0;
-    line-height: 1.5em;
-}
-
-pre.highlighted .pre-numbering {
-    background-color: #eee8d5;
-    border-radius: 3px 0 0 3px;
-    color: #9faaa9;
-    float: left;
-    font-size: 90%;
-    line-height: 1.5em;
-    list-style: none;
-    margin: 0;
-    min-width: 2.5em;
-    padding: 0.5em;
-    text-align: right;
-    user-select: none;
-}
-
 /*******
 * Hero *
 *******/
 
-section.hero {
+.homepage section.hero {
     background-color: #7a36b1;
     background-image: linear-gradient(to right bottom, #4c158a, #ad65d6);
     color: #fff;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-    padding: 128px 0;
     max-width: 100%;
+    padding: 128px 0;
+    position: relative;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.homepage section.hero > div {
     position: relative;
 }
 
-section.hero > div {
-    position: relative;
-}
-
-section.hero img {
+.homepage section.hero img {
     filter: drop-shadow(0 12px 24px rgba(255, 255, 255, 0.25));
 }
 
-section.hero h1 {
+.homepage section.hero h1 {
     font-weight: 800;
 }
 
-section.hero h4 {
+.homepage section.hero h4 {
     font-weight: 400;
 }
 
-section.hero .button.suggested-action {
+.homepage section.hero .button.suggested-action {
     max-width: 100%;
 }
 
-sup {
+.homepage sup {
     font-family: 'Open Sans';
     font-size: 16px;
     font-weight: 600;
@@ -240,7 +182,7 @@ sup {
 * Docs *
 *******/
 
-section.docs {
+.homepage section.docs {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -248,26 +190,26 @@ section.docs {
     position: relative;
 }
 
-section.docs h2 {
+.homepage section.docs h2 {
     color: #7a36b1;
     margin: 16px 0;
 }
 
-section.docs p {
+.homepage section.docs p {
     color: #333;
     text-align: center;
 }
 
-section.docs .card {
+.homepage section.docs .card {
     text-align: center;
 }
 
 @media only screen and (min-width: 640px) {
-    section.docs {
+    .homepage section.docs {
         max-width: 1200px;
     }
 
-    section.docs .card {
+    .homepage section.docs .card {
         max-width: 300px;
     }
 }
@@ -276,37 +218,37 @@ section.docs .card {
 * AppCenter *
 ************/
 
-section.pitch-appcenter {
+.homepage section.pitch-appcenter {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     margin: 0 auto;
 }
 
-section.pitch-appcenter div {
+.homepage section.pitch-appcenter div {
     margin: 16px;
 }
 
-section.pitch-appcenter li {
+.homepage section.pitch-appcenter li {
     line-height: 1.65;
     margin: 16px 0;
     text-align: left;
 }
 
-.pitch-appcenter .fa-li {
+.homepage .pitch-appcenter .fa-li {
     font-size: 1.25em;
 }
 
 @media only screen and (min-width: 640px) {
-    section.pitch-appcenter {
+    .homepage section.pitch-appcenter {
         max-width: 1200px;
     }
 
-    section.pitch-appcenter div {
+    .homepage section.pitch-appcenter div {
         flex: 0 0 calc(50% - 32px);
     }
 
-    section.pitch-appcenter.pitch-appcenter div:first-child {
+    .homepage section.pitch-appcenter.pitch-appcenter div:first-child {
         order: 2;
     }
 }
@@ -315,32 +257,32 @@ section.pitch-appcenter li {
 * Tools *
 *******/
 
-section.tools {
+.homepage section.tools {
     padding: 64px 0;
 }
 
-section.tools h2 {
+.homepage section.tools h2 {
     margin: 0 16px 64px;
     text-align: center;
 }
 
-section.tools > div {
+.homepage section.tools > div {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
-section.tools .card {
+.homepage section.tools .card {
     margin-bottom: 32px;
 }
 
-section.tools .card > img {
+.homepage section.tools .card > img {
     height: 36px;
     margin: 0 auto 24px;
     display: block;
 }
 
-section.tools .banner {
+.homepage section.tools .banner {
     background-color: #7a36b1;
     background-image: linear-gradient(to right bottom, #4c158a, #ad65d6);
     color: #fff;
@@ -349,73 +291,73 @@ section.tools .banner {
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-section.tools .banner h1 {
+.homepage section.tools .banner h1 {
     font-size: 4em;
 }
 
-section.tools .banner h1,
-section.tools .banner p {
+.homepage section.tools .banner h1,
+.homepage section.tools .banner p {
     text-align: center;
 }
 
-section.tools .banner p.small {
+.homepage section.tools .banner p.small {
     font-size: 0.8em;
 }
 
-section.tools .banner p.split {
+.homepage section.tools .banner p.split {
     font-size: 3em;
     font-weight: 300;
     line-height: 1.2em;
     margin: 0;
 }
 
-section.tools .banner p.split span {
+.homepage section.tools .banner p.split span {
     font-size: 0.5em;
     opacity: 0.8;
     vertical-align: middle;
 }
 
-section.tools .banner svg {
+.homepage section.tools .banner svg {
     height: 46px;
     vertical-align: bottom;
     filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.3));
 }
 
-section.tools .banner .fa {
+.homepage section.tools .banner .fa {
     color: #fff;
 }
 
-section.tools .workflow {
+.homepage section.tools .workflow {
     display: flex;
     align-items: baseline;
     justify-content: space-around;
 }
 
-section.tools .workflow div {
+.homepage section.tools .workflow div {
     flex: 0 0 30%;
     text-align: center;
 }
 
-section.tools .workflow,
-section.tools .workflow p {
+.homepage section.tools .workflow,
+.homepage section.tools .workflow p {
     margin-top: 22px;
 }
 
-section.tools ul {
+.homepage section.tools ul {
     margin-top: 24px;
 }
 
-section.tools p {
+.homepage section.tools p {
     text-align: center;
 }
 
 @media only screen and (min-width: 640px) {
-    section.tools > div {
+    .homepage section.tools > div {
         margin: 0 auto;
         max-width: 1200px;
     }
 
-    section.tools > div > div {
+    .homepage section.tools > div > div {
         flex: 0 0 calc(50% - 32px);
         max-width: 468px;
     }
@@ -425,26 +367,26 @@ section.tools p {
 * Other *
 ********/
 
-a.button[disabled] {
+.homepage a.button[disabled] {
     background: transparent;
     opacity: 0.6;
 }
 
-.fa-li,
-.card .fa,
-.third .fa {
+.homepage .fa-li,
+.homepage .card .fa,
+.homepage .third .fa {
     color: #7a36b1;
 }
 
-footer,
-.grey {
+.homepage footer,
+.homepage .grey {
     background-color: #fafafa;
 }
 
-.fa-ul li {
+.homepage .fa-ul li {
     margin-bottom: 32px;
 }
 
-.fa-li {
+.homepage .fa-li {
     width: 16px;
 }

@@ -9,7 +9,6 @@ defmodule Houston.Umbrella.MixProject do
       deps: deps(),
       docs: [
         main: "Houston",
-        logo: "path/to/logo.png",
         extras: ["README.md"]
       ]
     ]

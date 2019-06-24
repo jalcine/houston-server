@@ -1,4 +1,4 @@
-defmodule HoustonDashboard.PageController do
+defmodule HoustonDashboard.HomepageController do
   use HoustonDashboard, :controller
 
   def index(conn, _params) do

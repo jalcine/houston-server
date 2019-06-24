@@ -53,7 +53,8 @@ config :houston_dashboard, HoustonDashboard.Endpoint,
 config :houston_dashboard, HoustonDashboard.Endpoint,
   live_reload: [
     patterns: [
-      ~r{lib/houston_dashboard/live/.*(ex)$},
+      ~r{lib/houston_dashboard/forms/.*(ex)$},
+      ~r{lib/houston_dashboard/live_views/.*(ex)$},
       ~r{lib/houston_dashboard/templates/.*(eex)$},
       ~r{lib/houston_dashboard/views/.*(ex)$},
       ~r{priv/gettext/.*(po)$},
