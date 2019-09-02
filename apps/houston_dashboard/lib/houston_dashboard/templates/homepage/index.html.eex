@@ -131,7 +131,7 @@
   </div>
   <div class="grid">
     <div class="two-thirds">
-<pre><code>public class MyApp : Gtk.Application {
+      <pre><code>public class MyApp : Gtk.Application {
 
     public MyApp () {
         Object (application_id: "com.github.myteam.myapp",
