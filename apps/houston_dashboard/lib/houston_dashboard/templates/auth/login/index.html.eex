@@ -13,9 +13,9 @@
     <div class="error">
       <span><%= @error %></span>
     </div>
-  <%= end %>
+  <% end %>
 
   <div>
     <%= submit dgettext("auth", "Log In") %>
   </div>
-<%= end %>
+<% end %>
