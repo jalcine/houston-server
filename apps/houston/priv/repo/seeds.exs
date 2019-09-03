@@ -17,17 +17,20 @@
 
 {:ok, _} = Application.ensure_all_started(:ex_machina)
 
-Houston.Repo.transaction(fn ->
-  Ecto.Adapters.SQL.query!(Houston.Repo, "SET session_replication_role = 'replica';")
+Houston.Repo.transaction(
+  fn ->
+    Ecto.Adapters.SQL.query!(Houston.Repo, "SET session_replication_role = 'replica';")
 
-  try do
-    __ENV__.file
-    |> Path.dirname()
-    |> Path.join("seeds/**/*.exs")
-    |> Path.wildcard()
-    |> Enum.sort()
-    |> Enum.each(&Code.eval_file(&1))
-  after
-    Ecto.Adapters.SQL.query!(Houston.Repo, "SET session_replication_role = 'origin';")
-  end
-end, [timeout: :infinity])
+    try do
+      __ENV__.file
+      |> Path.dirname()
+      |> Path.join("seeds/**/*.exs")
+      |> Path.wildcard()
+      |> Enum.sort()
+      |> Enum.each(&Code.eval_file(&1))
+    after
+      Ecto.Adapters.SQL.query!(Houston.Repo, "SET session_replication_role = 'origin';")
+    end
+  end,
+  timeout: :infinity
+)

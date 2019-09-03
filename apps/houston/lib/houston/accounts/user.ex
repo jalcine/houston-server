@@ -64,8 +64,9 @@ defmodule Houston.Accounts.User do
   """
   def query_login(query, username_or_email) do
     from u in query,
-      where: (u.username == ^username_or_email) or
-              u.email == ^username_or_email
+      where:
+        u.username == ^username_or_email or
+          u.email == ^username_or_email
   end
 
   @doc """

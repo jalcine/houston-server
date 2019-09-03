@@ -23,7 +23,7 @@ defmodule HoustonLegacy.Application do
     config =
       :houston_legacy
       |> Application.get_env(HoustonLegacy.Repo)
-      |> Keyword.merge([name: HoustonLegacy.Repo])
+      |> Keyword.merge(name: HoustonLegacy.Repo)
 
     worker(Mongo, [config])
   end

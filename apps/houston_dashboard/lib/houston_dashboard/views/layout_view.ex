@@ -12,7 +12,9 @@ defmodule HoustonDashboard.LayoutView do
   """
   def full_path_class(%Plug.Conn{request_path: "/"}),
     do: full_path_class("homepage")
+
   def full_path_class(%Plug.Conn{request_path: path}), do: full_path_class(path)
+
   def full_path_class(path) when is_binary(path) do
     path
     |> String.replace("/", "-")
@@ -33,6 +35,7 @@ defmodule HoustonDashboard.LayoutView do
     |> hd()
     |> String.trim()
     |> String.downcase()
+
     # TODO: Remove Elixir.HoustonDashboard.
     # TODO: Lowercase here
   end
