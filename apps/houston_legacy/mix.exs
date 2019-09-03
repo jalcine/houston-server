@@ -33,7 +33,7 @@ defmodule HoustonLegacy.MixProject do
   defp deps do
     [
       {:flow, "~> 0.14"},
-      {:mongodb, "~> 0.1.0"},
+      {:mongodb, "~> 0.5.0"},
       {:poolboy, "~> 1.5.2"},
 
       # Umbrella dependencies

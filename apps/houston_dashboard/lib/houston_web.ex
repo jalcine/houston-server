@@ -22,6 +22,7 @@ defmodule HoustonDashboard do
       use Phoenix.Controller, namespace: HoustonDashboard
       import Plug.Conn
       import HoustonDashboard.Gettext
+      import Phoenix.LiveView.Controller, only: [live_render: 3]
       alias HoustonDashboard.Router.Helpers, as: Routes
     end
   end
@@ -38,10 +39,17 @@ defmodule HoustonDashboard do
 
       import HoustonDashboard.ErrorHelpers
       import HoustonDashboard.Gettext
-      import HoustonDashboard.TemplateHelpers
-      import Phoenix.LiveView, only: [live_render: 2, live_render: 3]
+      import Phoenix.LiveView, only: [live_render: 2, live_render: 3, live_link: 1, live_link: 2]
 
       alias HoustonDashboard.Router.Helpers, as: Routes
+    end
+  end
+
+  def live_view do
+    quote do
+      use Phoenix.LiveView
+
+      import Phoenix.LiveView, only: [live_render: 2, live_render: 3, live_link: 1, live_link: 2]
     end
   end
 

@@ -5,10 +5,12 @@ defmodule HoustonLegacy.Application do
 
   use Application
 
+  import Supervisor.Spec
+
   def start(_type, _args) do
     # List all child processes to be supervised
     children = [
-      start_repo()
+      repo_child()
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
@@ -17,12 +19,12 @@ defmodule HoustonLegacy.Application do
     Supervisor.start_link(children, opts)
   end
 
-  def start_repo() do
-    configuration = Application.get_env(:houston_legacy, HoustonLegacy.Repo)
+  defp repo_child() do
+    config =
+      :houston_legacy
+      |> Application.get_env(HoustonLegacy.Repo)
+      |> Keyword.merge(name: HoustonLegacy.Repo)
 
-    %{
-      id: HoustonLegacy.Repo,
-      start: {HoustonLegacy.Repo, :start_link, [configuration]}
-    }
+    worker(Mongo, [config])
   end
 end

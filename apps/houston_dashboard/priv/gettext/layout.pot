@@ -11,77 +11,66 @@ msgid ""
 msgstr ""
 
 #, elixir-format
-#: lib/houston_dashboard/templates/layout/app.html.eex:41
-#: lib/houston_dashboard/templates/layout/app.html.eex:41
+#: lib/houston_dashboard/templates/layout/app.html.eex:42
 msgid "Support"
 msgstr ""
 
 #, elixir-format
 #: lib/houston_dashboard/templates/layout/app.html.eex:8
-#: lib/houston_dashboard/templates/layout/app.html.eex:8
-#: lib/houston_dashboard/templates/layout/app.html.eex:16
 #: lib/houston_dashboard/templates/layout/app.html.eex:16
 #: lib/houston_dashboard/templates/layout/app.html.eex:19
-#: lib/houston_dashboard/templates/layout/app.html.eex:19
-#: lib/houston_dashboard/templates/layout/app.html.eex:42
-#: lib/houston_dashboard/templates/layout/app.html.eex:42
+#: lib/houston_dashboard/templates/layout/app.html.eex:43
 msgid "Developer"
 msgstr ""
 
 #, elixir-format
-#: lib/houston_dashboard/templates/layout/app.html.eex:43
-#: lib/houston_dashboard/templates/layout/app.html.eex:43
+#: lib/houston_dashboard/templates/layout/app.html.eex:44
 msgid "Get Involved"
 msgstr ""
 
 #, elixir-format
 #: lib/houston_dashboard/templates/layout/app.html.eex:10
-#: lib/houston_dashboard/templates/layout/app.html.eex:10
 #: lib/houston_dashboard/templates/layout/app.html.eex:17
-#: lib/houston_dashboard/templates/layout/app.html.eex:17
-#: lib/houston_dashboard/templates/layout/app.html.eex:20
 #: lib/houston_dashboard/templates/layout/app.html.eex:20
 msgid "Resources for designing, developing, and publishing apps for elementary OS."
 msgstr ""
 
 #, elixir-format
-#: lib/houston_dashboard/templates/layout/app.html.eex:44
-#: lib/houston_dashboard/templates/layout/app.html.eex:44
+#: lib/houston_dashboard/templates/layout/app.html.eex:45
 msgid "Store"
 msgstr ""
 
 #, elixir-format
-#: lib/houston_dashboard/templates/layout/app.html.eex:75
-#: lib/houston_dashboard/templates/layout/app.html.eex:75
+#: lib/houston_dashboard/templates/layout/app.html.eex:80
 msgid "OEMs"
 msgstr ""
 
 #, elixir-format
-#: lib/houston_dashboard/templates/layout/app.html.eex:78
-#: lib/houston_dashboard/templates/layout/app.html.eex:78
+#: lib/houston_dashboard/templates/layout/app.html.eex:83
 msgid "Open Source"
 msgstr ""
 
 #, elixir-format
-#: lib/houston_dashboard/templates/layout/app.html.eex:73
-#: lib/houston_dashboard/templates/layout/app.html.eex:73
+#: lib/houston_dashboard/templates/layout/app.html.eex:78
 msgid "Press"
 msgstr ""
 
 #, elixir-format
-#: lib/houston_dashboard/templates/layout/app.html.eex:76
-#: lib/houston_dashboard/templates/layout/app.html.eex:76
+#: lib/houston_dashboard/templates/layout/app.html.eex:81
 msgid "Privacy"
 msgstr ""
 
 #, elixir-format
-#: lib/houston_dashboard/templates/layout/app.html.eex:77
-#: lib/houston_dashboard/templates/layout/app.html.eex:77
+#: lib/houston_dashboard/templates/layout/app.html.eex:82
 msgid "Team"
 msgstr ""
 
 #, elixir-format
-#: lib/houston_dashboard/templates/layout/app.html.eex:74
-#: lib/houston_dashboard/templates/layout/app.html.eex:74
+#: lib/houston_dashboard/templates/layout/app.html.eex:79
 msgid "Brand"
+msgstr ""
+
+#, elixir-format
+#: lib/houston_dashboard/templates/layout/app.html.eex:73
+msgid "Copyright © %{year} elementary, Inc."
 msgstr ""

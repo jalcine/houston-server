@@ -3,19 +3,20 @@ defmodule Houston.Accounts.User do
   This module represents every type of user that could log into our system.
   """
 
-  use Ecto.Schema
+  use Houston.Schema
 
-  import Ecto.Changeset
-
-  alias Houston.Accounts.User
+  alias Houston.Accounts.{Session, User}
 
   @terms_of_service_date DateTime.from_naive!(~N[2017-05-26 00:00:00], "Etc/UTC")
 
   schema "users" do
     field :username, :string
     field :email, :string
+    field :password, :string
 
     field :terms_of_service, :utc_datetime
+
+    has_many :sessions, Session
 
     timestamps(type: :utc_datetime)
   end
@@ -37,6 +38,7 @@ defmodule Houston.Accounts.User do
           username: String.t(),
           email: String.t(),
           terms_of_service: DateTime.t(),
+          sessions: Schema.many(Session),
           inserted_at: DateTime.t(),
           updated_at: DateTime.t()
         }
@@ -55,6 +57,16 @@ defmodule Houston.Accounts.User do
     user
     |> cast(attrs, @required_fields ++ @optional_fields)
     |> validate_required(@required_fields)
+  end
+
+  @doc """
+  Queries for a user with the given login username or email address.
+  """
+  def query_login(query, username_or_email) do
+    from u in query,
+      where:
+        u.username == ^username_or_email or
+          u.email == ^username_or_email
   end
 
   @doc """

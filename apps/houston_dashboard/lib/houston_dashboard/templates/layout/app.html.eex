@@ -28,9 +28,9 @@
     <link rel="stylesheet" type="text/css" media="all" href="<%= Routes.static_path(@conn, "/css/app.css") %>" />
   </head>
 
-  <body class="<%= body_class(@conn) %>">
-    <nav>
-      <div class="nav-content">
+  <body class="<%= body_classes(@conn) %>">
+    <nav class="page-nav">
+      <div>
         <ul>
           <li>
             <a href="https://elementary.io">
@@ -45,7 +45,7 @@
           <li><a href="https://elementary.io/store"><%= dgettext "layout", "Store" %></a></li>
         </ul>
 
-        <ul class="right">
+        <ul>
           <li><a href="https://www.facebook.com/elementaryos" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a></li>
           <li><a href="https://mastodon.social/@elementary" target="_blank" rel="noopener"><i class="fab fa-mastodon"></i></a></li>
           <li><a href="https://medium.com/elementaryos" target="_blank" rel="noopener"><i class="fab fa-medium-m"></i></a></li>
@@ -57,20 +57,20 @@
       </div>
     </nav>
 
-    <main role="main" class="container">
-      <%= Enum.map(get_flash(@conn), fn {flash_key, flash_message} -> %>
-        <div class="alert alert--<%= flash_key %>">
-          <p><%= flash_message %></p>
-        </div>
-      <% end) %>
+    <%= Enum.map(get_flash(@conn), fn {flash_key, flash_message} -> %>
+      <div role="alert" class="alert alert--<%= flash_key %>">
+        <p><%= flash_message %></p>
+      </div>
+    <% end) %>
 
+    <main role="main" class="container">
       <%= render @view_module, @view_template, assigns %>
     </main>
 
     <footer>
       <div>
         <p>
-          Copyright &copy; <%= DateTime.utc_now().year %> elementary, Inc.
+          <%= dgettext "layout", "Copyright © %{year} elementary, Inc.", %{year: DateTime.utc_now().year} %>
         </p>
       </div>
 
@@ -84,6 +84,7 @@
       </ul>
     </footer>
 
+    <script>window.userToken = "<%= user_token @conn %>"</script>
     <script type="text/javascript" src="https://elementary.io/scripts/main.js"></script>
     <script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
   </body>
