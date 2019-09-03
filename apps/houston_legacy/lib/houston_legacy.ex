@@ -12,7 +12,7 @@ defmodule HoustonLegacy do
   Syncs all known old legacy projects.
   """
   def sync_all!() do
-    Mongo
+    HoustonLegacy.Repo
     |> Mongo.find("projects", %{})
     |> Enum.to_list()
     |> Enum.map(& &1["name"])
@@ -26,13 +26,13 @@ defmodule HoustonLegacy do
   """
   def sync!(rdnn) do
     legacy_project =
-      Mongo
+      HoustonLegacy.Repo
       |> Mongo.find("projects", %{name: rdnn})
       |> Enum.to_list()
       |> hd()
 
     legacy_builds =
-      Mongo
+      HoustonLegacy.Repo
       |> Mongo.find("cycles", %{name: %{in: rdnn}})
       |> Enum.to_list()
 
