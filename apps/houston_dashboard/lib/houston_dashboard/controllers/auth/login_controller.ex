@@ -5,23 +5,28 @@ defmodule HoustonDashboard.Auth.LoginController do
   alias HoustonDashboard.Auth
 
   def index(conn, _params) do
-    live_render(conn, Auth.LoginLiveView, session: %{
-      csrf_token: Phoenix.Controller.get_csrf_token()
+    render(conn, "index.html", %{
+      username_or_email: "",
+      error: ""
     })
   end
 
-  def create(conn, %{"user" => user_params}) do
-    case Accounts.login(user_params["username"], user_params["password"]) do
+  def create(conn, %{"login" => login_params}) do
+    %{
+      "username_or_email" => username_or_email,
+      "password" => password
+    } = login_params
+
+    case Accounts.login(username_or_email, password) do
       {:ok, session} ->
         conn
         |> put_session(:user_token, session.token)
         |> redirect(to: "/")
+
       {:error, message} ->
-        conn
-        |> put_flash(:error, message)
-        |> live_render(Auth.LoginLiveView, session: %{
-          csrf_token: Phoenix.Controller.get_csrf_token(),
-          params: user_params
+        render(conn, "index.html", %{
+          username_or_email: username_or_email,
+          error: message
         })
     end
   end

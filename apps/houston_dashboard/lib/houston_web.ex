@@ -39,7 +39,7 @@ defmodule HoustonDashboard do
 
       import HoustonDashboard.ErrorHelpers
       import HoustonDashboard.Gettext
-      import Phoenix.LiveView, only: [live_render: 2, live_render: 3]
+      import Phoenix.LiveView, only: [live_render: 2, live_render: 3, live_link: 1, live_link: 2]
 
       alias HoustonDashboard.Router.Helpers, as: Routes
     end
@@ -49,13 +49,7 @@ defmodule HoustonDashboard do
     quote do
       use Phoenix.LiveView
 
-      import Phoenix.LiveView, only: [assign: 2, live_render: 2, live_render: 3]
-    end
-  end
-
-  def form do
-    quote do
-
+      import Phoenix.LiveView, only: [live_render: 2, live_render: 3, live_link: 1, live_link: 2]
     end
   end
 

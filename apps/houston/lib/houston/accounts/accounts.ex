@@ -46,6 +46,15 @@ defmodule Houston.Accounts do
   @doc """
   Checks a user's password using cryptography sound methods to avoid timing
   attacks.
+
+  ## Examples
+
+      iex> check_password(user, "notpassword")
+      false
+
+      iex> check_password("password", "password")
+      true
+
   """
   def check_password(%User{} = user, given_password),
     do: check_password(user.password, given_password)
@@ -53,7 +62,7 @@ defmodule Houston.Accounts do
   def check_password(password, given_password) when is_binary(given_password),
     do: Plug.Crypto.secure_compare(password, given_password)
 
-  def check_password(password, _), do: false
+  def check_password(_password, _), do: false
 
   #
   # Session
@@ -64,13 +73,15 @@ defmodule Houston.Accounts do
   """
   def create_session(%User{} = user, expires_at \\ nil) do
     user
-    |> build_assoc(:session, expires_at: expires_at)
+    |> build_assoc(:sessions)
+    |> Session.changeset(%{expires_at: expires_at})
     |> Repo.insert()
   end
 
   def create_session!(%User{} = user, expires_at \\ nil) do
     user
-    |> build_assoc(:session, expires_at: expires_at)
+    |> build_assoc(:sessions)
+    |> Session.changeset(%{expires_at: expires_at})
     |> Repo.insert!()
   end
 end

@@ -29,7 +29,7 @@ defmodule Houston.MixProject do
 
   # Specifies which paths to compile per environment.
   defp elixirc_paths(:test), do: ["lib", "test/support"]
-  defp elixirc_paths(_), do: ["lib"]
+  defp elixirc_paths(_), do: ["lib", "test/support/factories"]
 
   # Specifies your project dependencies.
   #
@@ -41,7 +41,7 @@ defmodule Houston.MixProject do
       {:postgrex, ">= 0.0.0"},
 
       # Testing dependencies
-      {:ex_machina, "~> 2.2", only: :test}
+      {:ex_machina, "~> 2.2"}
     ]
   end
 
@@ -53,7 +53,8 @@ defmodule Houston.MixProject do
   # See the documentation for `Mix` for more info on aliases.
   defp aliases do
     [
-      "ecto.setup": ["ecto.create", "ecto.migrate", "run priv/repo/seeds.exs"],
+      "ecto.seed": ["run priv/repo/seeds.exs"],
+      "ecto.setup": ["ecto.create", "ecto.migrate", "ecto.seed"],
       "ecto.reset": ["ecto.drop", "ecto.setup"],
       test: ["ecto.create --quiet", "ecto.migrate", "test"]
     ]

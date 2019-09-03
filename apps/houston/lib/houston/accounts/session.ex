@@ -86,6 +86,9 @@ defmodule Houston.Accounts.Session do
   end
 
   @doc false
-  defp generate_expires_at(),
-    do: DateTime.utc_now() |> DateTime.add(60 * 60 * 24 * 7, :second)
+  defp generate_expires_at() do
+    DateTime.utc_now()
+    |> DateTime.add(60 * 60 * 24 * 7, :second)
+    |> DateTime.truncate(:second)
+  end
 end
