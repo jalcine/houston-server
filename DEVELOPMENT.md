@@ -13,9 +13,16 @@ and for [installing docker-compose](https://docs.docker.com/compose/install/).
 
 ## Running
 
-Once you have `docker` and `docker-compose` installed, simply run
-`docker-compose up` and you will get a running developer instance of Houston
-server. You can view the website at [`localhost:4000`](http://localhost:4000).
+Once you have `docker` and `docker-compose` installed, simply run the following
+command to setup the environment (database migrations and seed data):
+
+- `docker-compose run houston mix ecto.setup`
+
+Then run this command to start everything:
+
+- `docker-compose up`
+
+You can view the site at [`localhost:4000`](http://localhost:4000).
 
 **NOTE** If you make any changes to elixir dependencies or node dependencies,
 you will need to rebuild the Houston image with `docker-compose build houston`.
