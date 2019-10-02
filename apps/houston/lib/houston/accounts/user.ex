@@ -7,18 +7,18 @@ defmodule Houston.Accounts.User do
 
   alias Houston.Accounts.{Session, User}
 
-  @terms_of_service_date DateTime.from_naive!(~N[2017-05-26 00:00:00], "Etc/UTC")
+  @terms_of_service_date ~U[2017-05-26 00:00:00Z]
 
   schema "users" do
     field :username, :string
     field :email, :string
-    field :password, :string
+    field :password, Types.OneWayEncryptedString
 
     field :terms_of_service, :utc_datetime
 
     has_many :sessions, Session
 
-    timestamps(type: :utc_datetime)
+    timestamps()
   end
 
   @typedoc """
@@ -26,6 +26,7 @@ defmodule Houston.Accounts.User do
 
   * `username`: A unique human readable string value to identify the user.
   * `email`: A contact email for the user.
+  * `password`: A one way encrypted and hashed version of the user's password.
 
   * `terms_of_service`: A date time value of when the user accepted the terms of
     service. We can use this prompt another agreement if we ever update it.
@@ -37,6 +38,7 @@ defmodule Houston.Accounts.User do
           id: Ecto.UUID.t(),
           username: String.t(),
           email: String.t(),
+          password: String.t(),
           terms_of_service: DateTime.t(),
           sessions: Schema.many(Session),
           inserted_at: DateTime.t(),
@@ -49,6 +51,7 @@ defmodule Houston.Accounts.User do
   )a
 
   @optional_fields ~w(
+    password
     terms_of_service
   )a
 

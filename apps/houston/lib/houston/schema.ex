@@ -12,6 +12,7 @@ defmodule Houston.Schema do
       import Ecto.Query
 
       alias Houston.Schema
+      alias Houston.Types
 
       @timestamps_opts [type: :utc_datetime, usec: false]
     end

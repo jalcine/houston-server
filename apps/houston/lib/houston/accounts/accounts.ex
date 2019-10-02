@@ -60,7 +60,7 @@ defmodule Houston.Accounts do
     do: check_password(user.password, given_password)
 
   def check_password(password, given_password) when is_binary(given_password),
-    do: Plug.Crypto.secure_compare(password, given_password)
+    do: Houston.Types.OneWayEncryptedString.same?(password, given_password)
 
   def check_password(_password, _), do: false
 
