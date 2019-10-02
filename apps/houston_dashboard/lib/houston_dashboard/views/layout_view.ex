@@ -26,7 +26,7 @@ defmodule HoustonDashboard.LayoutView do
   the called controller.
   """
   def namespace_class(%Plug.Conn{} = conn) do
-    controller = Map.get(conn.private, :phoenix_controller) |> IO.inspect()
+    controller = Map.get(conn.private, :phoenix_controller)
 
     controller
     |> to_string()
