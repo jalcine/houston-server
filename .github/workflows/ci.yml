@@ -45,7 +45,9 @@ jobs:
   #       run: docker-compose build
 
   #     - name: Setup
-  #       run: sudo apt install -y firefox firefox-geckodriver
+  #       run: |
+  #         sudo apt update &&
+  #         sudo apt install -y firefox firefox-geckodriver
 
   #     - name: Test
   #       run: |
@@ -62,26 +64,30 @@ jobs:
         run: docker-compose build
 
       - name: Setup
-        run: sudo apt install -y chromium-browser chromium-chromedriver
+        run: |
+          sudo apt update &&
+          sudo apt install -y chromium-browser chromium-chromedriver
 
       - name: Test
         run: |
           chromedriver --port=4444 &
           docker-compose run -e WEBDRIVER=selenium -e BROWSER=chromium houston test --only browser
 
-  browser_safari:
-    name: Browser Test Safari
-    runs-on: macOS-10.14
-    steps:
-      - uses: actions/checkout@v1
+  # Install docker-compose to start working on this more. Will need an macOS
+  # computer to assist in this.
+  # browser_safari:
+  #   name: Browser Test Safari
+  #   runs-on: macOS-10.14
+  #   steps:
+  #     - uses: actions/checkout@v1
 
-      - name: Compile
-        run: docker-compose build
+  #     - name: Compile
+  #       run: docker-compose build
 
-      - name: Test
-        run: |
-          safaridriver --enable --port=4444 &
-          docker-compose run -e WEBDRIVER=selenium -e BROWSER=safari houston test --only browser
+  #     - name: Test
+  #       run: |
+  #         safaridriver --enable --port=4444 &
+  #         docker-compose run -e WEBDRIVER=selenium -e BROWSER=safari houston test --only browser
 
   # Need window support in the Houston dockerfile before we can continue
   # browser_edge:
