@@ -33,22 +33,24 @@ jobs:
     - name: Test
       run: docker-compose run houston test --exclude browser
 
-  browser_firefox:
-    name: Browser Test Firefox
-    runs-on: ubuntu-18.04
-    steps:
-      - uses: actions/checkout@v1
+  # Firefox is some issues
+  # PR: https://github.com/HashNuke/hound/pull/237
+  # browser_firefox:
+  #   name: Browser Test Firefox
+  #   runs-on: ubuntu-18.04
+  #   steps:
+  #     - uses: actions/checkout@v1
 
-      - name: Compile
-        run: docker-compose build
+  #     - name: Compile
+  #       run: docker-compose build
 
-      - name: Setup
-        run: sudo apt install -y firefox firefox-geckodriver
+  #     - name: Setup
+  #       run: sudo apt install -y firefox firefox-geckodriver
 
-      - name: Test
-        run: |
-          geckodriver --port=4444 &
-          docker-compose run -e WEBDRIVER=selenium -e BROWSER=firefox houston test --only browser --max-cases 1
+  #     - name: Test
+  #       run: |
+  #         geckodriver --port=4444 &
+  #         docker-compose run -e WEBDRIVER=selenium -e BROWSER=firefox houston test --only browser --max-cases 1
 
   browser_chromium:
     name: Browser Test Chromium
@@ -81,19 +83,20 @@ jobs:
           safaridriver --enable --port=4444 &
           docker-compose run -e WEBDRIVER=selenium -e BROWSER=safari houston test --only browser
 
-  browser_edge:
-    name: Browser Test Edge
-    runs-on: windows-2019
-    steps:
-      - uses: actions/checkout@v1
+  # Need window support in the Houston dockerfile before we can continue
+  # browser_edge:
+  #   name: Browser Test Edge
+  #   runs-on: windows-2019
+  #   steps:
+  #     - uses: actions/checkout@v1
 
-      - name: Compile
-        run: docker-compose build
+  #     - name: Compile
+  #       run: docker-compose build
 
-      - name: Setup
-        run: DISM.exe /Online /Add-Capability /CapabilityName:Microsoft.WebDriver~~~~0.0.1.0
+  #     - name: Setup
+  #       run: DISM.exe /Online /Add-Capability /CapabilityName:Microsoft.WebDriver~~~~0.0.1.0
 
-      - name: Test
-        run: |
-          MicrosoftWebDriver.exe --port=4444 &
-          docker-compose run -e WEBDRIVER=selenium -e BROWSER=edge houston test --only browser
+  #     - name: Test
+  #       run: |
+  #         MicrosoftWebDriver.exe --port=4444 &
+  #         docker-compose run -e WEBDRIVER=selenium -e BROWSER=edge houston test --only browser
