@@ -31,7 +31,7 @@ jobs:
     - name: Test
       run: docker-compose run houston test --exclude browser
 
-  Browser Test:
+  Browser:
     runs-on: ${{ matrix.os }}
 
     strategy:
