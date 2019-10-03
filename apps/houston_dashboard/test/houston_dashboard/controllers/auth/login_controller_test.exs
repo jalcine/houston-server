@@ -9,6 +9,7 @@ defmodule HoustonDashboard.Auth.LoginControllerTest do
     :ok
   end
 
+  @tag :browser
   test "login redirects to homepage after success" do
     AccountsFactory.insert(:user, %{
       email: "admin@elementary.io",
@@ -23,6 +24,7 @@ defmodule HoustonDashboard.Auth.LoginControllerTest do
     assert current_path() == Routes.homepage_path(@endpoint, :index)
   end
 
+  @tag :browser
   test "login shows error after unsuccessful login" do
     submit_form("form", %{
       "#login_username_or_email": "fake@elementary.io",

@@ -5,7 +5,9 @@ config :logger, level: :warn
 
 # Setup hound for browser testing.
 config :hound,
-  driver: "phantomjs",
+  driver: System.get_env("WEBDRIVER") || "phantomjs",
+  browser: System.get_env("BROWSER") || "phantomjs",
+  path_prefix: "",
   app_port: 4099
 
 # Configure the Houston database
