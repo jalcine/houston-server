@@ -19,6 +19,8 @@ defmodule HoustonDashboard.ConnCase do
     quote do
       # Import conveniences for testing with connections
       use Phoenix.ConnTest
+      use Houston.Factories
+
       alias HoustonDashboard.Router.Helpers, as: Routes
 
       # The default endpoint for testing

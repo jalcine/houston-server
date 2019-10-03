@@ -7,10 +7,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile-development
-    stdin_open: true
-    tty: true
-    ports:
-      - "4000:4000"
+    network_mode: host
     environment:
       PORT: 4000
     volumes:
@@ -21,16 +18,24 @@ services:
     depends_on:
       - postgres
       - mongo
+      - browser
 
   postgres:
     image: timescale/timescaledb:latest-pg11
+    network_mode: host
     environment:
       POSTGRES_PASSWORD: postgres
       POSTGRES_USERNAME: postgres
 
   mongo:
     image: mongo:3.2
+    network_mode: host
     volumes:
       - ./apps/houston_legacy/test/fixtures:/docker-entrypoint-initdb.d
     environment:
       MONGO_INITDB_DATABASE: houston_test
+
+  browser:
+    image: wernight/phantomjs
+    network_mode: host
+    command: phantomjs --webdriver=8910

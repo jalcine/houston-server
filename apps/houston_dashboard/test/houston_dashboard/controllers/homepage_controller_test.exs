@@ -1,4 +1,4 @@
-defmodule HoustonDashboard.PageControllerTest do
+defmodule HoustonDashboard.HomepageControllerTest do
   use HoustonDashboard.ConnCase
 
   test "GET /", %{conn: conn} do

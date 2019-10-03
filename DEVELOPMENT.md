@@ -22,7 +22,11 @@ Then run this command to start everything:
 
 - `docker-compose up`
 
-You can view the site at [`localhost:4000`](http://localhost:4000).
+You can view the site at http://localhost:4000.
+
+You can also view the site at https://localhost:4001. If you are using chrome,
+you will need to enable self signed certificates by enabling
+`chrome://flags/#allow-insecure-localhost`.
 
 **NOTE** If you make any changes to elixir dependencies or node dependencies,
 you will need to rebuild the Houston image with `docker-compose build houston`.

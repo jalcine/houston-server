@@ -2,16 +2,6 @@
 # and its dependencies with the aid of the Mix.Config module.
 use Mix.Config
 
-# By default, the umbrella project as well as each child
-# application will require this configuration file, as
-# configuration and dependencies are shared in an umbrella
-# project. While one could configure all applications here,
-# we prefer to keep the configuration of each individual
-# child application in their own app, but all other
-# dependencies, regardless if they belong to one or multiple
-# apps, should be configured in the umbrella to avoid confusion.
-import_config "../apps/*/config/config.exs"
-
 # Configures Elixir's Logger
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",
@@ -19,6 +9,23 @@ config :logger, :console,
 
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
+
+# Configure the Houston library app
+config :houston,
+  ecto_repos: [Houston.Repo]
+
+# Configure the HoustonDashboard app
+config :houston_dashboard,
+  ecto_repos: [Houston.Repo],
+  generators: [context_app: :houston]
+
+# Configures the HoustonDashboard endpoint
+config :houston_dashboard, HoustonDashboard.Endpoint,
+  url: [host: "localhost"],
+  live_view: [signing_salt: "iKaLYZza2WFNNqLzUUdRc3cDLdazTxJI"],
+  secret_key_base: "9bU3mPfnXmMfar/7/HfHyNreauJZYyHGQOGxV8F7Ud+FJpYuig+2W91a6uzWxvbB",
+  render_errors: [view: HoustonDashboard.ErrorView, accepts: ~w(html json)],
+  pubsub: [name: HoustonDashboard.PubSub, adapter: Phoenix.PubSub.PG2]
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.

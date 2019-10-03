@@ -49,7 +49,10 @@ defmodule HoustonDashboard.MixProject do
       {:houston, in_umbrella: true},
 
       # Development dependencies
-      {:phoenix_live_reload, "~> 1.2", only: :dev}
+      {:phoenix_live_reload, "~> 1.2", only: :dev},
+
+      # Testing dependencies
+      {:hound, "~> 1.0"}
     ]
   end
 end

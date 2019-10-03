@@ -19,6 +19,7 @@ defmodule HoustonDashboard.ChannelCase do
     quote do
       # Import conveniences for testing with channels
       use Phoenix.ChannelTest
+      use Houston.Factories
 
       # The default endpoint for testing
       @endpoint HoustonDashboard.Endpoint
