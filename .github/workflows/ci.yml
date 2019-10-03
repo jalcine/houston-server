@@ -7,7 +7,8 @@ on:
   - push
 
 jobs:
-  Format:
+  format:
+    name: Elixir Format
     runs-on: ubuntu-latest
 
     steps:
@@ -19,7 +20,8 @@ jobs:
     - name: Format
       run: docker-compose run houston format
 
-  Test:
+  test:
+    name: Elixir Test
     runs-on: ubuntu-latest
 
     steps:
@@ -31,67 +33,67 @@ jobs:
     - name: Test
       run: docker-compose run houston test --exclude browser
 
-  Browser:
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      matrix:
-        os: []
-        browser: []
-
-        include:
-          # Disabled due to geckodriver
-          # PR: https://github.com/HashNuke/hound/pull/237
-          # - os: ubuntu-18.04
-          #   browser: firefox
-
-          - os: ubuntu-18.04
-            browser: chromium
-
-          - os: macOS-10.14
-            browser: safari
-
-          - os: windows-2019
-            browser: edge
-
+  browser_firefox:
+    name: Browser Test Firefox
+    runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v1
 
       - name: Compile
         run: docker-compose build
 
-      - name: Setup Firefox
-        if: matrix.browser == 'firefox'
+      - name: Setup
         run: sudo apt install -y firefox firefox-geckodriver
 
-      - name: Setup Chromium
-        if: matrix.browser == 'chromium'
-        run: sudo apt install -y chromium-browser chromium-chromedriver
-
-      - name: Setup Edge
-        if: matrix.browser == 'edge'
-        run: DISM.exe /Online /Add-Capability /CapabilityName:Microsoft.WebDriver~~~~0.0.1.0
-
-      - name: Test Firefox
-        if: matrix.browser == 'firefox'
+      - name: Test
         run: |
           geckodriver --port=4444 &
           docker-compose run -e WEBDRIVER=geckodriver -e BROWSER=firefox houston test --only browser --max-cases 1
 
-      - name: Test Chromium
-        if: matrix.browser == 'chromium'
+  browser_chromium:
+    name: Browser Test Chromium
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Compile
+        run: docker-compose build
+
+      - name: Setup
+        run: sudo apt install -y chromium-browser chromium-chromedriver
+
+      - name: Test
         run: |
           chromedriver --port=4444 &
           docker-compose run -e WEBDRIVER=selenium -e BROWSER=chromium houston test --only browser
 
-      - name: Test Safari
-        if: matrix.browser == 'safari'
+  browser_safari:
+    name: Browser Test Safari
+    runs-on: macOS-10.04
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Compile
+        run: docker-compose build
+
+      - name: Test
         run: |
           safaridriver --enable --port=4444 &
           docker-compose run -e WEBDRIVER=selenium -e BROWSER=safari houston test --only browser
 
-      - name: Test Edge
-        if: matrix.browser == 'edge'
+  browser_edge:
+    name: Browser Test Edge
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Compile
+        run: docker-compose build
+
+      - name: Setup
+        run: DISM.exe /Online /Add-Capability /CapabilityName:Microsoft.WebDriver~~~~0.0.1.0
+
+      - name: Test
         run: |
           MicrosoftWebDriver.exe --port=4444 &
           docker-compose run -e WEBDRIVER=selenium -e BROWSER=edge houston test --only browser
