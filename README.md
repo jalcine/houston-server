@@ -12,9 +12,7 @@
 </div>
 
 <p align="center">
-  <a href="https://travis-ci.org/elementary/houston-server">
-    <img src="https://travis-ci.org/elementary/houston-server.svg" alt="travis-ci">
-  </a>
+  <img src="https://github.com/elementary/houston-server/workflows/CI/badge.svg" alt="CI">
 
   <a href="https://gitter.im/elementary/houston">
     <img src="https://badges.gitter.im/elementary/houston.svg" alt="gitter">
