@@ -36,6 +36,9 @@ jobs:
 
     strategy:
       matrix:
+        os: []
+        browser: []
+
         include:
           # Disabled due to geckodriver
           # PR: https://github.com/HashNuke/hound/pull/237
