@@ -21,6 +21,22 @@
 This repository is an elixir website for `https://developer-beta.elementary.io`.
 It is responsible for viewing GitHub repositories and building projects.
 
+## Scope
+
+This is a rewrite of the original houston server written in nodejs. While there
+are a lot of problems that this should address, the MVP is to duplicate it with
+a very few small changes / improvements:
+
+- [ ] Faster fetching of GitHub repositories
+- [ ] Using Postgresql instead of Mongodb
+
+In the future, this rewrite should include:
+
+- [ ] Searchable projects
+- [ ] Download statistics
+- [ ] A better written out review process
+- [ ] Support for other services other than GitHub
+
 ## Running
 
 This repository contains a `docker-compose.yml` file for easier development.
