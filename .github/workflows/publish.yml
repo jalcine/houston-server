@@ -108,7 +108,7 @@ jobs:
       - Test_Browser
 
     env:
-      DOCKER_IMAGE: docker.pkg.github.com/${{ github.repository_owner }}/${{ github.repository }}/houston-server:latest
+      DOCKER_IMAGE: docker.pkg.github.com/${{ github.repository }}/houston-server:latest
 
     steps:
       - name: Checkout
