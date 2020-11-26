@@ -1,0 +1,266 @@
+@charset "utf-8";
+
+@import "../node_modules/nprogress/nprogress.css";
+@import "colors";
+@import "layout";
+@import "typography";
+@import "nav";
+@import "alert";
+
+:root {
+  color-scheme: light dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  background-color: var(--bg-color);
+  color: var(--fg-color);
+  fill: var(--fg-color);
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+html {
+  // To blend with the footer on short pages
+  background-color: var(--secondary-bg-color);
+}
+
+svg {
+  fill: inherit;
+}
+
+.error {
+  max-width: 22rem;
+  margin: 8em auto;
+  text-align: center;
+
+  p {
+    font-family: var(--ui-font);
+  }
+}
+
+.products > ul {
+  align-content: stretch;
+  align-items: stretch;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(1, 1fr);
+  justify-content: stretch;
+  text-align: center;
+
+  > li {
+    list-style: none;
+
+    a {
+      color: inherit;
+      display: block;
+      text-decoration: none;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  @media (min-width: 970px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+#devices > ul {
+  align-content: stretch;
+  align-items: stretch;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(1, 1fr);
+  justify-content: stretch;
+
+  > li {
+    list-style: none;
+
+    a {
+      color: inherit;
+      display: block;
+      font-size: 1.25rem;
+      font-weight: 900;
+      text-decoration: none;
+
+      &::after {
+        color: inherit;
+        content: "→";
+        display: inline-block;
+        font-weight: inherit;
+        padding-left: 3px;
+        transition: transform 0.15s ease-in-out;
+        transform: translateX(0);
+      }
+
+      &:hover::after {
+        transform: translateX(3px);
+      }
+    }
+
+    > ul > li {
+      line-height: 1.25;
+      list-style: none;
+      margin: 0.75em 0;
+    }
+
+    > ul > li:first-child {
+      border-top: 3px solid;
+      margin-top: 0.5em;
+      padding-top: 0.75em;
+    }
+  }
+
+  @media (min-width: 970px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+#devices ul {
+  margin: 0;
+  padding: 0;
+}
+
+.product {
+  display: grid;
+  grid-gap: 0 1rem;
+  grid-template-areas:
+    "title"
+    "image"
+    "price"
+    "description"
+    "options";
+
+  > h1 {
+    grid-area: title;
+  }
+
+  > h2 {
+    grid-area: price;
+  }
+
+  > img {
+    grid-area: image;
+    max-width: 100%;
+  }
+
+  > p {
+    grid-area: description;
+  }
+
+  > .options {
+    grid-area: options;
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      margin: -0.5rem;
+      padding: 0;
+
+      li {
+        flex: 0 0 auto;
+        list-style: none;
+        margin: 0.5rem;
+      }
+
+      a,
+      button {
+        background-color: transparent;
+        border-radius: 6px;
+        border: none;
+        color: inherit;
+        font-family: inherit;
+        font-size: inherit;
+        text-decoration: none;
+
+        &.active {
+          background-color: var(--secondary-bg-color);
+        }
+
+        &.disabled {
+          opacity: 0.4;
+        }
+      }
+    }
+
+    ul.color {
+      flex-direction: column;
+      margin: -0.5rem -1rem;
+
+      li {
+        margin: 0;
+      }
+
+      a,
+      button {
+        align-content: center;
+        align-items: center;
+        display: grid;
+        grid-gap: 0 1ch;
+        grid-template-areas:
+          "color name"
+          "color warning";
+        grid-template-rows: 1fr auto;
+        justify-content: flex-start;
+        padding: 0.5rem 1rem;
+        text-align: left;
+      }
+
+      .color {
+        border-radius: 1.5rem;
+        border: 1px solid #000;
+        display: block;
+        grid-area: color;
+        height: 3rem;
+        width: 3rem;
+
+        &.charcoal { background-color: #1f221f; }
+        &.aqua { background-color: #4b9ebc; }
+        &.oatmeal { background-color: #dfd9cb; }
+        &.white { background-color: #dfdfdf; }
+        &.purple { background-color: #574162; }
+      }
+
+      .name {
+        grid-area: name;
+      }
+
+      .warning {
+        grid-area: warning;
+        font-size: 0.8rem;
+      }
+    }
+
+    ul.size {
+      margin: -0.5rem -1.5rem;
+
+      li {
+        margin: 0 0.5rem;
+      }
+
+      a,
+      button {
+        display: block;
+        padding: 0.5rem 1rem;
+        text-align: center;
+      }
+    }
+  }
+
+  @media (min-width: 900px) {
+    grid-template-areas:
+      "title title"
+      "image price"
+      "image description"
+      "image options";
+    grid-template-columns: 3fr 2fr;
+  }
+}
